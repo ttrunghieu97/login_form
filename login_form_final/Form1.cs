@@ -41,7 +41,7 @@ namespace login_form_final
             if (exit == DialogResult.Yes)
             {
                 Application.ExitThread();
-            } 
+            }
             else
             { }
         }
@@ -51,5 +51,3 @@ namespace login_form_final
         }
     }
 }
-//test change 1
-//test change 2
