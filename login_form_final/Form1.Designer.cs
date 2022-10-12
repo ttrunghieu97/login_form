@@ -97,6 +97,7 @@
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(213, 22);
             this.user.TabIndex = 3;
+            this.user.TextChanged += new System.EventHandler(this.user_TextChanged);
             // 
             // pass
             // 

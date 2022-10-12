@@ -21,8 +21,13 @@ namespace login_form_final
         {
             string tendangnhap = user.Text;
             string matkhau = pass.Text;
-            string str = "Ten dang nhap cua ban la: " + tendangnhap + "; Mat khau: " + matkhau;
-            MessageBox.Show(str);
+            if (tendangnhap == "tth" && matkhau == "tth")
+            {
+                he_thong ht = new he_thong();
+                ht.ShowDialog();
+            }
+            else
+                MessageBox.Show("sai");
         }
 
         private void user_Click(object sender, EventArgs e)
@@ -46,6 +51,11 @@ namespace login_form_final
             { }
         }
         private void passs_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_TextChanged(object sender, EventArgs e)
         {
 
         }
