@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.txt_masv = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.que_quan = new System.Windows.Forms.TextBox();
+            this.calendar_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.txt_que_quan = new System.Windows.Forms.TextBox();
             this.txt_hoten = new System.Windows.Forms.TextBox();
-            this.chk_game = new System.Windows.Forms.CheckBox();
-            this.chk_music = new System.Windows.Forms.CheckBox();
+            this.rbt_game = new System.Windows.Forms.CheckBox();
+            this.rbt_music = new System.Windows.Forms.CheckBox();
             this.rbt_nu = new System.Windows.Forms.CheckBox();
-            this.chk_phuot = new System.Windows.Forms.CheckBox();
-            this.chk_thethao = new System.Windows.Forms.CheckBox();
+            this.rbt_phuot = new System.Windows.Forms.CheckBox();
+            this.rbt_thethao = new System.Windows.Forms.CheckBox();
             this.rbt_nam = new System.Windows.Forms.CheckBox();
             this.exit = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -60,24 +60,24 @@
             this.txt_masv.Size = new System.Drawing.Size(213, 30);
             this.txt_masv.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // calendar_ngaysinh
             // 
-            this.dateTimePicker1.CustomFormat = "dd-mm-yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(244, 156);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 30);
-            this.dateTimePicker1.TabIndex = 25;
+            this.calendar_ngaysinh.CustomFormat = "dd-mm-yyyy";
+            this.calendar_ngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.calendar_ngaysinh.Location = new System.Drawing.Point(244, 156);
+            this.calendar_ngaysinh.Name = "calendar_ngaysinh";
+            this.calendar_ngaysinh.Size = new System.Drawing.Size(180, 30);
+            this.calendar_ngaysinh.TabIndex = 25;
             // 
-            // que_quan
+            // txt_que_quan
             // 
-            this.que_quan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.que_quan.Location = new System.Drawing.Point(244, 228);
-            this.que_quan.Multiline = true;
-            this.que_quan.Name = "que_quan";
-            this.que_quan.Size = new System.Drawing.Size(249, 63);
-            this.que_quan.TabIndex = 24;
+            this.txt_que_quan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_que_quan.Location = new System.Drawing.Point(244, 228);
+            this.txt_que_quan.Multiline = true;
+            this.txt_que_quan.Name = "txt_que_quan";
+            this.txt_que_quan.Size = new System.Drawing.Size(249, 63);
+            this.txt_que_quan.TabIndex = 24;
             // 
             // txt_hoten
             // 
@@ -87,27 +87,27 @@
             this.txt_hoten.Size = new System.Drawing.Size(180, 30);
             this.txt_hoten.TabIndex = 23;
             // 
-            // chk_game
+            // rbt_game
             // 
-            this.chk_game.AutoSize = true;
-            this.chk_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_game.Location = new System.Drawing.Point(337, 339);
-            this.chk_game.Name = "chk_game";
-            this.chk_game.Size = new System.Drawing.Size(87, 29);
-            this.chk_game.TabIndex = 21;
-            this.chk_game.Text = "Game";
-            this.chk_game.UseVisualStyleBackColor = true;
+            this.rbt_game.AutoSize = true;
+            this.rbt_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbt_game.Location = new System.Drawing.Point(337, 339);
+            this.rbt_game.Name = "rbt_game";
+            this.rbt_game.Size = new System.Drawing.Size(87, 29);
+            this.rbt_game.TabIndex = 21;
+            this.rbt_game.Text = "Game";
+            this.rbt_game.UseVisualStyleBackColor = true;
             // 
-            // chk_music
+            // rbt_music
             // 
-            this.chk_music.AutoSize = true;
-            this.chk_music.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_music.Location = new System.Drawing.Point(244, 302);
-            this.chk_music.Name = "chk_music";
-            this.chk_music.Size = new System.Drawing.Size(86, 29);
-            this.chk_music.TabIndex = 20;
-            this.chk_music.Text = "Music";
-            this.chk_music.UseVisualStyleBackColor = true;
+            this.rbt_music.AutoSize = true;
+            this.rbt_music.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbt_music.Location = new System.Drawing.Point(244, 302);
+            this.rbt_music.Name = "rbt_music";
+            this.rbt_music.Size = new System.Drawing.Size(86, 29);
+            this.rbt_music.TabIndex = 20;
+            this.rbt_music.Text = "Music";
+            this.rbt_music.UseVisualStyleBackColor = true;
             // 
             // rbt_nu
             // 
@@ -120,27 +120,27 @@
             this.rbt_nu.Text = "Nữ";
             this.rbt_nu.UseVisualStyleBackColor = true;
             // 
-            // chk_phuot
+            // rbt_phuot
             // 
-            this.chk_phuot.AutoSize = true;
-            this.chk_phuot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_phuot.Location = new System.Drawing.Point(244, 340);
-            this.chk_phuot.Name = "chk_phuot";
-            this.chk_phuot.Size = new System.Drawing.Size(85, 29);
-            this.chk_phuot.TabIndex = 18;
-            this.chk_phuot.Text = "Phượt";
-            this.chk_phuot.UseVisualStyleBackColor = true;
+            this.rbt_phuot.AutoSize = true;
+            this.rbt_phuot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbt_phuot.Location = new System.Drawing.Point(244, 340);
+            this.rbt_phuot.Name = "rbt_phuot";
+            this.rbt_phuot.Size = new System.Drawing.Size(85, 29);
+            this.rbt_phuot.TabIndex = 18;
+            this.rbt_phuot.Text = "Phượt";
+            this.rbt_phuot.UseVisualStyleBackColor = true;
             // 
-            // chk_thethao
+            // rbt_thethao
             // 
-            this.chk_thethao.AutoSize = true;
-            this.chk_thethao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_thethao.Location = new System.Drawing.Point(337, 301);
-            this.chk_thethao.Name = "chk_thethao";
-            this.chk_thethao.Size = new System.Drawing.Size(112, 29);
-            this.chk_thethao.TabIndex = 17;
-            this.chk_thethao.Text = "Thể thao";
-            this.chk_thethao.UseVisualStyleBackColor = true;
+            this.rbt_thethao.AutoSize = true;
+            this.rbt_thethao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbt_thethao.Location = new System.Drawing.Point(337, 301);
+            this.rbt_thethao.Name = "rbt_thethao";
+            this.rbt_thethao.Size = new System.Drawing.Size(112, 29);
+            this.rbt_thethao.TabIndex = 17;
+            this.rbt_thethao.Text = "Thể thao";
+            this.rbt_thethao.UseVisualStyleBackColor = true;
             // 
             // rbt_nam
             // 
@@ -179,6 +179,7 @@
             this.btn_xoa.TabIndex = 15;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_capnhat
             // 
@@ -192,6 +193,7 @@
             this.btn_capnhat.TabIndex = 14;
             this.btn_capnhat.Text = "Cập nhật";
             this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
             // 
             // btn_them
             // 
@@ -294,14 +296,14 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_masv);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.que_quan);
+            this.Controls.Add(this.calendar_ngaysinh);
+            this.Controls.Add(this.txt_que_quan);
             this.Controls.Add(this.txt_hoten);
-            this.Controls.Add(this.chk_game);
-            this.Controls.Add(this.chk_music);
+            this.Controls.Add(this.rbt_game);
+            this.Controls.Add(this.rbt_music);
             this.Controls.Add(this.rbt_nu);
-            this.Controls.Add(this.chk_phuot);
-            this.Controls.Add(this.chk_thethao);
+            this.Controls.Add(this.rbt_phuot);
+            this.Controls.Add(this.rbt_thethao);
             this.Controls.Add(this.rbt_nam);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.btn_xoa);
@@ -325,14 +327,14 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_masv;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox que_quan;
+        private System.Windows.Forms.DateTimePicker calendar_ngaysinh;
+        private System.Windows.Forms.TextBox txt_que_quan;
         private System.Windows.Forms.TextBox txt_hoten;
-        private System.Windows.Forms.CheckBox chk_game;
-        private System.Windows.Forms.CheckBox chk_music;
+        private System.Windows.Forms.CheckBox rbt_game;
+        private System.Windows.Forms.CheckBox rbt_music;
         private System.Windows.Forms.CheckBox rbt_nu;
-        private System.Windows.Forms.CheckBox chk_phuot;
-        private System.Windows.Forms.CheckBox chk_thethao;
+        private System.Windows.Forms.CheckBox rbt_phuot;
+        private System.Windows.Forms.CheckBox rbt_thethao;
         private System.Windows.Forms.CheckBox rbt_nam;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button btn_xoa;

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.OleDb;
 using System.Configuration;
+using System.Globalization;
 
 namespace login_form_final
 {
@@ -56,7 +57,7 @@ namespace login_form_final
         {
             string masinhvien = txt_masv.Text;
             string hoten = txt_hoten.Text;
-            string ngaysinh = dateTimePicker1.Text;
+            string ngaysinh = calendar_ngaysinh.Text;
             int gioitinh = 0;
             if (rbt_nam.Checked == true)
             {
@@ -66,23 +67,23 @@ namespace login_form_final
             {
                 gioitinh = 0;
             }
-            string quequan = que_quan.Text;
+            string quequan = txt_que_quan.Text;
             string sothich = "";
-            if (chk_game.Checked == true)
+            if (rbt_game.Checked == true)
             {
-                sothich = sothich + " ;" + chk_game.Text;
+                sothich = sothich + " ;" + rbt_game.Text;
             }
-            if (chk_phuot.Checked == true)
+            if (rbt_phuot.Checked == true)
             {
-                sothich = sothich + " ;" + chk_phuot.Text;
+                sothich = sothich + " ;" + rbt_phuot.Text;
             }
-            if (chk_music.Checked == true)
+            if (rbt_music.Checked == true)
             {
-                sothich = sothich + " ;" + chk_music.Text;
+                sothich = sothich + " ;" + rbt_music.Text;
             }
-            if (chk_thethao.Checked == true)
+            if (rbt_thethao.Checked == true)
             {
-                sothich = sothich + " ;" + chk_thethao.Text;
+                sothich = sothich + " ;" + rbt_thethao.Text;
             }
             string ghichu = "";
             string strSQL = "";
@@ -101,6 +102,85 @@ namespace login_form_final
             else
             {
                 MessageBox.Show("Them that bai");
+            }
+        }
+
+        private void btn_capnhat_Click(object sender, EventArgs e)
+        {
+            string masv = txt_masv.Text;
+            string hoten = txt_hoten.Text;
+            string ngaysinh = calendar_ngaysinh.Text;
+            string gt = "";
+            if (rbt_nam.Checked==true)
+            {
+                gt = "Nam";
+            }    
+            else if (rbt_nu.Checked == true)
+            {
+                gt = "Nữ";
+            }
+            string quequan = txt_que_quan.Text;
+            string sothich = "";
+            if (rbt_game.Checked == true)
+            {
+                sothich = sothich + " ;" + rbt_game.Text;
+            }
+            if (rbt_phuot.Checked == true)
+            {
+                sothich = sothich + " ;" + rbt_phuot.Text;
+            }
+            if (rbt_music.Checked == true)
+            {
+                sothich = sothich + " ;" + rbt_music.Text;
+            }
+            if (rbt_thethao.Checked == true)
+            {
+                sothich = sothich + " ;" + rbt_thethao.Text;
+            }
+            if (rbt_game .Checked==true)
+            {
+                sothich = sothich + rbt_game.Text;
+            }    
+            string str_sql = "";
+
+            str_sql = str_sql + " update sinhvien set  hoten = N'" + hoten + "', ngaysinh = '" + ngaysinh + "', ";
+            str_sql = str_sql + " gioitinh = N'" + gt + "', quequan = N'" + quequan + "', sothich = N'" + sothich + "', ghichu = ''";
+            str_sql = str_sql + " where masv = '" + masv + "'";
+
+            DataTable dtb_mh = new DataTable();
+            connection_DB cn_mh = new connection_DB();
+            SqlConnection cnn_mh = cn_mh.Load_Connection();
+            string x = "";
+            x = cn_mh.Excute_DataTable(str_sql, cnn_mh);
+            if (x == "")
+            {
+                MessageBox.Show("cap nhat thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("cap nhat that bai");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            string masv = txt_masv.Text;
+
+            string str_sql = "";
+            str_sql = str_sql + "delete from sinhvien where masv='" + masv + "'";
+
+            connection_DB cn_mh = new connection_DB();
+            SqlConnection cnn_mh = cn_mh.Load_Connection();
+            DataTable dtb_mh = new DataTable();
+
+            string x = cn_mh.Excute_DataTable(str_sql, cnn_mh);
+            if (x == "")
+            {
+                MessageBox.Show("Xóa thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
             }
         }
     }
