@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.masv = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_masv
@@ -289,11 +291,22 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Cập nhật DS SV";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(121, 391);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(563, 321);
+            this.dataGridView1.TabIndex = 28;
+            // 
             // cap_nhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 759);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_masv);
             this.Controls.Add(this.calendar_ngaysinh);
@@ -319,6 +332,7 @@
             this.Name = "cap_nhat";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.cap_nhat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +362,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label masv;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

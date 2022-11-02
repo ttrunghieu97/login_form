@@ -25,6 +25,15 @@ namespace login_form_final
 
         private void cap_nhat_Load(object sender, EventArgs e)
         {
+            string str_sql = "";
+            str_sql = str_sql + "select * from sinhvien";
+
+            connection_DB cn_mh = new connection_DB();
+            SqlConnection cnn_mh = cn_mh.Load_Connection();
+            DataTable dtb_mh = new DataTable();
+
+            dtb_mh = cn_mh.Get_DataTable(str_sql, cnn_mh);
+
         }
 
         private void exit_Click(object sender, EventArgs e)
