@@ -34,6 +34,7 @@ namespace login_form_final
 
             dtb_mh = cn_mh.Get_DataTable(str_sql, cnn_mh);
 
+            dataGridView1.DataSource = dtb_mh;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -59,7 +60,14 @@ namespace login_form_final
 
         private void exit_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            connection_DB cn_mh = new connection_DB();
+            SqlConnection cnn_mh = cn_mh.Load_Connection();
+            DataTable dtb_mh = new DataTable();
+            string sql = "";
+            sql = sql + "select * from sinhvien";
+            dtb_mh = cn_mh.Get_DataTable(sql, cnn_mh);
+            dataGridView1.DataSource = dtb_mh;
+            dataGridView1.Refresh();
         }
 
         private void btn_them_Click_1(object sender, EventArgs e)
@@ -119,32 +127,32 @@ namespace login_form_final
             string masv = txt_masv.Text;
             string hoten = txt_hoten.Text;
             string ngaysinh = calendar_ngaysinh.Text;
-            string gt = "";
+            int gt = 0;
             if (rbt_nam.Checked==true)
             {
-                gt = "Nam";
+                gt = 1;
             }    
             else if (rbt_nu.Checked == true)
             {
-                gt = "Nữ";
+                gt = 0;
             }
             string quequan = txt_que_quan.Text;
             string sothich = "";
             if (rbt_game.Checked == true)
             {
-                sothich = sothich + " ;" + rbt_game.Text;
+                sothich = sothich + rbt_game.Text + ";";
             }
             if (rbt_phuot.Checked == true)
             {
-                sothich = sothich + " ;" + rbt_phuot.Text;
+                sothich = sothich + " ; " + rbt_phuot.Text;
             }
             if (rbt_music.Checked == true)
             {
-                sothich = sothich + " ;" + rbt_music.Text;
+                sothich = sothich + " ; " + rbt_music.Text;
             }
             if (rbt_thethao.Checked == true)
             {
-                sothich = sothich + " ;" + rbt_thethao.Text;
+                sothich = sothich + " ; " + rbt_thethao.Text;
             }
             if (rbt_game .Checked==true)
             {
@@ -153,7 +161,7 @@ namespace login_form_final
             string str_sql = "";
 
             str_sql = str_sql + " update sinhvien set  hoten = N'" + hoten + "', ngaysinh = '" + ngaysinh + "', ";
-            str_sql = str_sql + " gioitinh = N'" + gt + "', quequan = N'" + quequan + "', sothich = N'" + sothich + "', ghichu = ''";
+            str_sql = str_sql + " gioitinh = " + gt + ", quequan = N'" + quequan + "', sothich = N'" + sothich + "', ghichu = ''";
             str_sql = str_sql + " where masv = '" + masv + "'";
 
             DataTable dtb_mh = new DataTable();
@@ -191,6 +199,18 @@ namespace login_form_final
             {
                 MessageBox.Show("Xóa thất bại");
             }
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            connection_DB cn_mh = new connection_DB();
+            SqlConnection cnn_mh = cn_mh.Load_Connection();
+            DataTable dtb_mh = new DataTable();
+            string sql = "";
+            sql = sql + "select * from sinhvien";
+            dtb_mh = cn_mh.Get_DataTable(sql, cnn_mh);
+            dataGridView1.DataSource = dtb_mh;
+            dataGridView1.Refresh();
         }
     }
 }

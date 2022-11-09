@@ -38,10 +38,6 @@
             this.rbt_phuot = new System.Windows.Forms.CheckBox();
             this.rbt_thethao = new System.Windows.Forms.CheckBox();
             this.rbt_nam = new System.Windows.Forms.CheckBox();
-            this.exit = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_capnhat = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +47,11 @@
             this.masv = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.exit = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_capnhat = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,62 +156,6 @@
             this.rbt_nam.Text = "Nam";
             this.rbt_nam.UseVisualStyleBackColor = true;
             // 
-            // exit
-            // 
-            this.exit.AutoSize = true;
-            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Image = global::login_form_final.Properties.Resources.exit;
-            this.exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exit.Location = new System.Drawing.Point(524, 258);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(160, 38);
-            this.exit.TabIndex = 16;
-            this.exit.Text = "Thoát";
-            this.exit.UseVisualStyleBackColor = true;
-            this.exit.Click += new System.EventHandler(this.exit_Click_1);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.AutoSize = true;
-            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Image = global::login_form_final.Properties.Resources.delete;
-            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_xoa.Location = new System.Drawing.Point(524, 209);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(160, 38);
-            this.btn_xoa.TabIndex = 15;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_capnhat
-            // 
-            this.btn_capnhat.AutoSize = true;
-            this.btn_capnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_capnhat.Image = global::login_form_final.Properties.Resources.update;
-            this.btn_capnhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_capnhat.Location = new System.Drawing.Point(524, 156);
-            this.btn_capnhat.Name = "btn_capnhat";
-            this.btn_capnhat.Size = new System.Drawing.Size(160, 38);
-            this.btn_capnhat.TabIndex = 14;
-            this.btn_capnhat.Text = "Cập nhật";
-            this.btn_capnhat.UseVisualStyleBackColor = true;
-            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
-            // 
-            // btn_them
-            // 
-            this.btn_them.AutoSize = true;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Image = global::login_form_final.Properties.Resources.sign_add_icon;
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.Location = new System.Drawing.Point(524, 102);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(160, 38);
-            this.btn_them.TabIndex = 13;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click_1);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -298,14 +243,83 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(563, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(1144, 321);
             this.dataGridView1.TabIndex = 28;
+            // 
+            // exit
+            // 
+            this.exit.AutoSize = true;
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Image = global::login_form_final.Properties.Resources.exit;
+            this.exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exit.Location = new System.Drawing.Point(524, 330);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(160, 38);
+            this.exit.TabIndex = 16;
+            this.exit.Text = "Thoát";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click_1);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.AutoSize = true;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.Image = global::login_form_final.Properties.Resources.delete;
+            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoa.Location = new System.Drawing.Point(524, 209);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(160, 38);
+            this.btn_xoa.TabIndex = 15;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_capnhat
+            // 
+            this.btn_capnhat.AutoSize = true;
+            this.btn_capnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_capnhat.Image = global::login_form_final.Properties.Resources.update;
+            this.btn_capnhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_capnhat.Location = new System.Drawing.Point(524, 156);
+            this.btn_capnhat.Name = "btn_capnhat";
+            this.btn_capnhat.Size = new System.Drawing.Size(160, 38);
+            this.btn_capnhat.TabIndex = 14;
+            this.btn_capnhat.Text = "Cập nhật";
+            this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
+            // 
+            // btn_them
+            // 
+            this.btn_them.AutoSize = true;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.Image = global::login_form_final.Properties.Resources.sign_add_icon;
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_them.Location = new System.Drawing.Point(524, 102);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(160, 38);
+            this.btn_them.TabIndex = 13;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click_1);
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.AutoSize = true;
+            this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_refresh.Location = new System.Drawing.Point(524, 271);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(160, 38);
+            this.btn_refresh.TabIndex = 16;
+            this.btn_refresh.Text = "Refresh ";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.exit_Click_1);
             // 
             // cap_nhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 759);
+            this.ClientSize = new System.Drawing.Size(1313, 759);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_masv);
@@ -318,6 +332,7 @@
             this.Controls.Add(this.rbt_phuot);
             this.Controls.Add(this.rbt_thethao);
             this.Controls.Add(this.rbt_nam);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_capnhat);
@@ -363,5 +378,6 @@
         private System.Windows.Forms.Label masv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }
